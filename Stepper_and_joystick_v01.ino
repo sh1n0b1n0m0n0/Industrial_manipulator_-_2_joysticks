@@ -15,7 +15,7 @@ int yPosition_joy_1 = 0;
 //int yPosition_joy_2 = 0;
 int xPosition_joy_3 = 0;
 int yPosition_joy_3 = 0;
-
+int stop_serv = 80;
 int angle = 10;
 
 int initial_position1 = 90;
@@ -64,14 +64,14 @@ void loop()
 //-------------------------------------------------------------------------------------------------------------------
 //1'st joystick and 2 serv 1,2
 //-------------------------------------------------------------------------------------------------------------------
-  servo1.write(83); //stop
+  servo1.write(stop_serv); //stop
     if (xPosition_joy_1 < 300)
     {
-        servo1.write(83); servo1.write(95); delay(100); servo1.write(83);
+        servo1.write(stop_serv); servo1.write(95); delay(100); servo1.write(stop_serv);
     }
     if (xPosition_joy_1 > 600)
     {
-        servo1.write(83); servo1.write(65); delay(100); servo1.write(83);
+        servo1.write(stop_serv); servo1.write(65); delay(100); servo1.write(stop_serv);
     }
 
 
